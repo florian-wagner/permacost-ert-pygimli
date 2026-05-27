@@ -1,0 +1,306 @@
+---
+title: Quarto RWTH presentation
+subtitle: This template shows what can be done
+format: rwth-revealjs
+---
+
+# New section (empty slide with title only)
+
+## Fantastic Ordered List
+
+1. One is smaller than...
+2. Two is smaller than...
+3. Three!
+
+Or combination
+
+- Yes
+- and
+  1. no
+  2. maybe
+
+
+
+## New slide
+Praesent dapibus vulputate leo eu facilisis. Donec et libero felis. Etiam sollicitudin, odio non sodales lacinia, felis lacus porttitor diam, non hendrerit nisi quam sed lacus. Aliquam erat volutpat. Morbi nisi dui, scelerisque sit amet finibus sed, sollicitudin in erat. Maecenas ac viverra ante, eu malesuada neque. Mauris commodo nisl nec magna pulvinar ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+## Introduction
+
+*TODO* Create an example file that demonstrates the formatting and features of your format.
+
+## More Information
+
+You can learn more about controlling the appearance of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
+
+# Hallo
+
+
+## New slide
+
+## Test
+
+::: {.columns}
+::: {.column}
+- hallo
+- test
+- was geht
+:::
+::: {.column}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante quis tellus aliquet fringilla id nec ligula. Pellentesque vulputate ligula in erat tincidunt, eu venenatis augue pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed a augue ut neque dignissim
+:::
+:::
+
+## Hello, There
+
+This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
+
+-   Presenting code and LaTeX equations
+-   Including computations in slide output
+-   Image, video, and iframe backgrounds
+-   Fancy transitions and animations
+-   Printing to PDF
+
+...and much more
+
+## Pretty Code {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+``` python
+import pygimli as pg
+
+mesh = pg.meshtools.createGrid(20,20)
+
+pg.show(mesh)
+```
+
+
+## Code Animations {auto-animate="true"}
+
+-   Over 20 syntax highlighting themes available
+-   Default theme optimized for accessibility
+
+
+``` python
+import pygimli as pg
+import matplotlib.pyplot as plt
+
+mesh = pg.meshtools.createGrid(20,20)
+
+fig, ax = plt.subplots()
+pg.show(mesh, ax=ax)
+```
+
+## Line Highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+## Executable Code
+
+
+## Animation {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #2780e3; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #3fb618; width: 200px; height: 150px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 200px; height: 150px; margin: 10px;"}
+:::
+:::
+
+## Animation {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-stack}
+::: {data-id="box1" style="background: #2780e3; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box2" style="background: #3fb618; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+
+## LaTeX Equations
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+
+::: {.column width="60%"}
+```{=tex}
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+```
+```{=tex}
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+:::
+
+
+## Column Layout
+
+Arrange content into columns of varying widths:
+
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+:::
+:::
+
+
+## Incremental Lists
+
+Lists can optionally be displayed incrementally:
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+
+
+## Fragments
+
+Incremental text display and animation with fragments:
+
+<br/>
+
+::: {.fragment .fade-in}
+Fade in
+:::
+
+::: {.fragment .fade-up}
+Slide up while fading in
+:::
+
+::: {.fragment .fade-left}
+Slide left while fading in
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Fade in then semi out
+:::
+
+. . .
+
+::: {.fragment .strike}
+Strike
+:::
+
+::: {.fragment .highlight-red}
+Highlight red
+:::
+
+
+## Neue Folie
+
+{{< fa thumbs-up >}} 
+
+::: {.callout-important}
+Test
+:::
+
+
+## Callout Blocks
+
+:::{.callout-note collapse='true'}
+### Note
+
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+:::{.callout-tip}
+### Tip With Caption
+
+This is an example of a callout with a caption.
+:::
+
+## More callout blocks
+
+:::{.callout-caution}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+:::{.callout-important}
+## Important
+
+This is important and it is not collapsible, since we didn't specify either `true` or `false` for `important` in our YAML header.
+:::
+
+
+:::{.callout-warning icon='false' collapse='false'}
+## warning
+
+WARNINGS !!!!
+:::
+
+## Columns test
+
+::: {.columns}
+
+::: {.column}
+Cras eu sapien ut ipsum commodo placerat ac at diam. Aliquam suscipit urna nec condimentum iaculis. Duis hendrerit eros ac gravida tincidunt. Praesent orci odio, pulvinar sed metus ac, scelerisque tincidunt elit. Donec pharetra sit amet diam eu pellentesque. Praesent quis volutpat arcu. Aliquam auctor finibus vestibulum. Suspendisse accumsan porttitor neque, at tincidunt ex pharetra nec. Phasellus ac dolor eget nunc mattis ultricies. In et tellus vel magna accumsan varius eu nec leo. Curabitur odio dolor, porttitor in lectus sed, consequat consectetur elit. Morbi vel quam a elit mattis consequat ac vitae enim. Nullam condimentum turpis vel purus pretium, at viverra nibh gravida. Aenean quis enim ac mi euismod vehicula. 
+:::
+::: {.column}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec ante quis tellus aliquet fringilla id nec ligula. Pellentesque vulputate ligula in erat tincidunt, eu venenatis augue pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed a augue ut neque dignissim euismod ac nec augue. Pellentesque gravida congue elementum. Duis pulvinar pellentesque sodales. Sed pharetra, nibh nec gravida sagittis, sapien enim cursus diam, a iaculis tellus erat sit amet purus. Nunc tortor felis, ornare eu ultricies sit amet, ultrices vitae dui. Integer ac lacinia leo. 
+:::
+
+:::

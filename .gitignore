@@ -71,6 +71,10 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+# Quarto render output (published to GitHub Pages via CI)
+/docs/
+slides/.quarto/
+
 # PyBuilder
 .pybuilder/
 target/

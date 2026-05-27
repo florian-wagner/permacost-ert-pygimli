@@ -1,0 +1,12 @@
+name: pg
+channels:
+  - conda-forge
+  - defaults
+  - gimli
+dependencies:
+  - pygimli >= 1.6.0
+  - jupyter
+  - pytest
+  - meshio
+  - scooby
+  - tqdm

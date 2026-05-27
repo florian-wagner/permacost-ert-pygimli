@@ -1,0 +1,30 @@
+title: rwth
+author: Florian Wagner
+version: 1.0.0
+quarto-required: ">=1.6.0"
+contributes:
+  formats:
+    revealjs:
+      theme: [default, rwth.scss]
+      controls: true
+      width: 1244
+      height: 700
+      margin: 0.05
+      slide-number: true
+      auto-stretch: true
+      max-width: 95%
+      template-partials:
+        - title-slide.html
+      logo: gim_logo.png
+      footer: Geophysical Imaging and Monitoring
+      transition: fade
+      output-location: column   
+      embed-resources: true
+
+      header-includes: |
+        <script src="_extensions/rwth/custom.js" type="application/javascript"></script>
+    menu:
+        side: left
+    slide-number: true
+    date-format: long
+    date: last-modified

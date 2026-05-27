@@ -1,0 +1,20 @@
+project:
+  type: default
+  output-dir: ../docs
+  render:
+    - index.qmd
+author:
+  name: Univ.-Prof. Dr. sc. Florian M. Wagner
+  orcid: 0000-0001-7407-9741
+  email: florian.wagner@gim.rwth-aachen.de
+  affiliation:
+    - name: RWTH Aachen University
+      department: Geophysical Imaging and Monitoring (GIM)
+      city: Aachen
+      country: DE
+      url: gim.rwth-aachen.de
+format: rwth-revealjs
+highlight-style: solarized
+csl: apa.csl
+execute:
+  freeze: auto
