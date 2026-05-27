@@ -1,9 +1,12 @@
 name: pg
 channels:
-  - conda-forge
-  - defaults
   - gimli
+  - conda-forge
 dependencies:
+  # pgcore 1.6.0 only ships builds for Python 3.12/3.13/3.14; without this
+  # pin Binder/repo2docker defaults to Python 3.10 and the solve fails.
+  # 3.12 has the widest dependency coverage (e.g. scipy <1.15).
+  - python 3.12.*
   - pygimli >= 1.6.0
   - jupyter
   - pytest
